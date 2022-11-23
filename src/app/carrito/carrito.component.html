@@ -1,4 +1,4 @@
 <div class="col-4"> Carrito de Compras</div>
 <ul>
-    <li *ngFor=" let b of ShopList">{{b.Nombre}} - {{b.cantidad}}</li>
+    <li *ngFor=" let b of ShopList$ | async">{{b.Nombre}} - {{b.cantidad}}</li>
 </ul>

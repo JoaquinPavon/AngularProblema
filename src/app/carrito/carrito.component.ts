@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import { Productos } from '../product-list/Product';
 import { ProductsCartService } from '../products-cart.service';
 
@@ -8,11 +9,11 @@ import { ProductsCartService } from '../products-cart.service';
   styleUrls: ['./carrito.component.scss']
 })
 export class CarritoComponent implements OnInit {
-ShopList: Productos[] = [];
+ShopList$!: Observable<Productos[]>;
 
   constructor(private cart: ProductsCartService ) {
-cart.ShopList.subscribe(c => this.ShopList = c);
 
+this.ShopList$ = cart.ShopList.asObservable();
 
 
 
