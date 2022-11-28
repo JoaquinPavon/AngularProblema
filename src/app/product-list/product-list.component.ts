@@ -24,7 +24,7 @@ products!: Productos [];
   }
 
   ngOnInit(): void {
-  this.dataService.getALL().subscribe(data => this.products = data );
+  this.dataService.getALL().subscribe(data => this.products = data);
   }
 
 

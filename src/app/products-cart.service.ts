@@ -27,7 +27,10 @@ addToCart(item: Productos) {
   this.ShopList.next(this._ShopList);
 }
 
+removeCart(){
+this._ShopList = [];
 
+}
 
   }
 
